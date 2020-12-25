@@ -17,7 +17,7 @@
   <div id="benefits" class="home-section white">
     <div class="row justify-content-center">
       <div class="col-9">
-        <div class="row justify-content-center">
+        <div class="row justify-content-left">
           <h2 class="mb-5">Aaron Good gets you. It doesn't matter what you look like, what
             you're feeling, what you're saying, Aaron sees you, he feels you,
             he hears you. If you have a complaint, he understands. If you are
@@ -30,7 +30,7 @@
               <p class="mb-4">{{ form.first_name }}</p>
               <p class="mb-4">{{ form.email }}</p>
               <p class="mb-4">{{ form.subject }}</p>
-              <p class="mb-4">{{ form.message(rows='3') }}</p>
+              <p class="mb-5">{{ form.message(rows='3') }}</p>
               {{ form.submit }}
             </form>
         </div>

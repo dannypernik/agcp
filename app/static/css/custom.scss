@@ -22,6 +22,10 @@ body {
   }
 }
 
+form {
+  width: 100%;
+}
+
 input, textarea {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -154,7 +158,7 @@ button.lg {
 
 .home-header {
   font-family: $title-font;
-  font-size: calc(1.75rem + 2vw);
+  font-size: calc(2rem + 1vw);
   margin-bottom: 2rem;
 }
 
