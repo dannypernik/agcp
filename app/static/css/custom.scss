@@ -72,6 +72,19 @@ button.lg {
   margin: calc(3rem + 1vw) auto 0;
 }
 
+.btn {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover, input[type="submit"]:hover {
+  background-color: $primary-color;
+  color: white;
+}
+
 #home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/student.jpg) center top no-repeat;
   background-attachment: fixed;
