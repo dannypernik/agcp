@@ -164,10 +164,12 @@ button.lg {
 
 .home-next a {
   text-decoration: none;
+  color: white;
 }
 
-.home-next a:hover h2 {
+.home-next a:hover {
   font-weight: 600;
+  color: grey;
 }
 
 .usp {
