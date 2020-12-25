@@ -100,7 +100,7 @@ button.lg {
 #home-logo {
   position: relative;
   display: block;
-  margin: 4rem auto calc(3rem);
+  margin: calc(8rem + 2vw) auto calc(3rem);
   height: calc(80px + 3vw);
 }
 
