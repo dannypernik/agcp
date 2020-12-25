@@ -67,8 +67,21 @@ button.lg {
   margin: calc(3rem + 1vw) auto 0;
 }
 
+.btn {
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: 2px solid #171D96;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover, input[type=submit]:hover {
+  background-color: #171D96;
+  color: white;
+}
+
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../img/lips.jpg) center top no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/student.jpg) center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -87,7 +100,7 @@ button.lg {
 #home-logo {
   position: relative;
   display: block;
-  margin: 15rem auto calc(3rem);
+  margin: 4rem auto calc(3rem);
   height: calc(80px + 3vw);
 }
 
