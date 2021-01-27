@@ -66,16 +66,6 @@ button.lg {
   font-size: calc(125% + 1vw);
 }
 
-.inverse button {
-  color: white;
-  border-color: white;
-}
-
-.home-section button {
-  display: block;
-  margin: calc(3rem + 1vw) auto 0;
-}
-
 .btn {
   font-size: 1.5rem;
   background-color: transparent;
@@ -89,44 +79,6 @@ button.lg {
   color: white;
 }
 
-#home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/lips.jpg) center top no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-#free-trial {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/lips.jpg) center top no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-@media screen and (max-width: 575px) {
-  #home, #free-trial {
-    background-attachment: scroll;
-  }
-}
-
-#home-logo {
-  position: relative;
-  display: block;
-  margin: calc(8rem + 2vw) auto calc(3rem);
-  height: calc(80px + 3vw);
-}
-
-#home-title {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: calc(1.8rem + 3vw);
-  font-weight: 400;
-}
-
-#home-tagline {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
-  font-size: calc(1.75rem + 1vw);
-  font-weight: 700;
-}
-
 .alert {
   position: absolute;
   top: 0;
@@ -136,63 +88,14 @@ button.lg {
   margin-bottom: 0;
 }
 
-.home-section {
-  padding-top: calc(4rem + 3vw);
+.glide__arrow--left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.home-section .row {
-  width: 100%;
-  margin: auto;
-}
-
-.home-section.white {
-  min-height: 100vh;
-  overflow: auto;
-}
-
-.home-section.inverse {
-  min-height: 100vh;
-  overflow: auto;
-  color: white;
-}
-
-.home-header {
-  font-family: $title-font;
-  font-size: calc(2rem + 1vw);
-  margin-bottom: 2rem;
-}
-
-.home-next {
-  display: table;
-  margin: calc(5rem + 3vw) auto 3rem;
-  text-align: center;
-}
-
-.home-next a {
-  text-decoration: none;
-  color: white;
-}
-
-.home-next a:hover {
-  font-weight: 600;
-  color: grey;
-}
-
-.usp {
-  margin-top: calc(2rem + 2vw);
-}
-
-.usp-icon {
-  width: 7rem;
-  height: 7rem;
-  fill: #7ac534;
-  margin-bottom: 2rem;
-}
-
-.usp-title {
-  margin-bottom: 1.5rem;
-}
-
-.usp-text {
-  color: #888;
+.glide__arrow--left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
