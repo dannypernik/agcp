@@ -1,21 +1,37 @@
 {% extends "base.html" %}
-{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/glide.core.min.css') }}">
+{% endblock head %}
 
 {% block content %}
   <div id="home" class="home-section inverse text-center">
     <div class="row justify-content-center">
-      <div class="col-sm-11">
-        <img id="home-logo" class="img-fluid"
-          src="{{ url_for('.static', filename='img/logo-white.svg') }}" alt="">
-        <h1 id="home-title">a good production company</h1>
+      <div class="glide">
+        <div data-glide-el="track" class="glide__track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="{{ url_for('static', filename='img/1.jpg')}}">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ url_for('static', filename='img/2.jpg')}}">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ url_for('static', filename='img/3.jpg')}}">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ url_for('static', filename='img/4.jpg')}}">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ url_for('static', filename='img/5.jpg')}}">
+            </li>
+          </ul>
+        </div>
 
-        <div class="home-next">
-          <a href="#benefits">
-            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi
-                bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-            </svg>
-          </a>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
         </div>
       </div>
     </div>
@@ -25,21 +41,7 @@
     <div class="row justify-content-center">
       <div class="col-9">
         <div class="row justify-content-left">
-          <h2 class="mb-5">Aaron Good gets you. It doesn't matter what you look like, what
-            you're feeling, what you're saying, Aaron sees you, he feels you,
-            he hears you. If you have a complaint, he understands. If you are
-            thrilled with the final cut, he will join in your ecstasy.</h2>
-            <h2 class="mb-5">So come on down to a good production company and discover how
-            good "good" can be.</h2>
-            <h1 class="home-header">Tell us your story</h1>
-            <form action="" method="post">
-              {{ form.hidden_tag() }}
-              <p class="mb-4">{{ form.first_name }}</p>
-              <p class="mb-4">{{ form.email }}</p>
-              <p class="mb-4">{{ form.subject }}</p>
-              <p class="mb-4">{{ form.message(rows='3') }}</p>
-              {{ form.submit }}
-            </form>
+
         </div>
       </div>
     </div>
@@ -49,6 +51,14 @@
 
 {% block scripts %}
   {{ super() }}
+  <script type="text/javascript" src="{{ url_for('static', filename='js/glide.min.js') }}"></script>
+  <script type="text/javascript">
+    new Glide('.glide', {
+      type: 'carousel',
+      startAt: 0,
+      perView: 3
+    }).mount();
+  </script>
   <script type="text/javascript"
           src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
 {% endblock scripts %}
