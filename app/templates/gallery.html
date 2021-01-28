@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/glider.min.css') }}">
+{% endblock head %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="glider-contain">
+      <div class="glider">
+        <div><img src="{{ url_for('static', filename='img/1.jpg')}}"></div>
+        <div><img src="{{ url_for('static', filename='img/2.jpg')}}"></div>
+        <div><img src="{{ url_for('static', filename='img/3.jpg')}}"></div>
+        <div><img src="{{ url_for('static', filename='img/4.jpg')}}"></div>
+        <div><img src="{{ url_for('static', filename='img/5.jpg')}}"></div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ url_for('static', filename='js/glider.min.js') }}"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function(){
+      new Glider(document.querySelector('.glider'), {
+        draggable: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      })
+    })
+  </script>
+  <script type="text/javascript"
+          src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+{% endblock scripts %}

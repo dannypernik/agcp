@@ -29,6 +29,10 @@ def index():
         return redirect(url_for('index', _anchor='home'))
     return render_template('index.html', form=form)
 
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
