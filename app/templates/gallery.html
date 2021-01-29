@@ -27,8 +27,19 @@
     window.addEventListener('load', function(){
       new Glider(document.querySelector('.glider'), {
         draggable: true,
-        slidesToShow: 3,
+        slidesToShow: 'auto',
         slidesToScroll: 1,
+        exactWidth: true,
+        itemWidth: 394,
+        duration: 1,
+        responsive: [
+          {
+            breakpoint: 775,
+            settings: {
+
+            }
+          }
+        ]
       })
     })
   </script>
